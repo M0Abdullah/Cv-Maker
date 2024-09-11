@@ -1,0 +1,305 @@
+/* Mainpage.css */
+
+/* Basic reset and full viewport height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #f4f6f9; /* Soft off-white background for the page */
+  }
+  
+  /* Main container styling */
+  .mainpage-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Soft gradient background */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Content container styling */
+  .content-container {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9); /* White background with slight opacity for content box */
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  .header {
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333333; /* Dark gray for the title */
+    margin: 0;
+    animation: bounceIn 1.5s ease-out;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    color: #666666; /* Medium gray for the subtitle */
+    margin: 10px 0 0;
+    animation: fadeIn 2s ease-out 0.5s;
+  }
+  
+  /* Features section styling */
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  
+  .feature-item {
+    background: #f9f9f9; /* Very light gray for feature items */
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-item h2 {
+    margin-top: 0;
+    color: #007bff; /* Primary blue for headings */
+  }
+  
+  .feature-item p {
+    color: #333333; /* Dark gray for text */
+  }
+  
+  /* Button styling */
+  .cta-section {
+    margin-top: 20px;
+  }
+  
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: #ffffff; /* White text */
+    background-color: #007bff; /* Primary blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease-out 1s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image container styling */
+  .image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .main-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Overlay styling */
+  .image-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .overlay-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .overlay-description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+
+/* For screens smaller than 1078px */
+@media (max-width: 1078px) {
+    .mainpage-container {
+      grid-template-columns: 1fr; /* Stack columns vertically */
+      padding: 10px;
+    }
+    
+    .content-container {
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    .title {
+      font-size: 2.5rem; /* Adjust title size */
+    }
+    
+    .subtitle {
+      font-size: 1.4rem; /* Adjust subtitle size */
+    }
+    
+    .features {
+      flex-direction: column; /* Stack feature items vertically */
+      align-items: center;
+    }
+    
+    .feature-item {
+      width: 100%; /* Full width for feature items */
+      max-width: 300px; /* Limit width */
+      margin-bottom: 20px; /* Add space between items */
+    }
+    
+    .main-image {
+      max-width: 100%; /* Responsive image width */
+    }
+    
+    .image-overlay {
+      max-width: 90%; /* Responsive overlay width */
+    }
+  }
+  
+  /* For screens smaller than 786px */
+  @media (max-width: 786px) {
+    .title {
+      font-size: 2rem; /* Further adjust title size */
+    }
+    
+    .subtitle {
+      font-size: 1.2rem; /* Further adjust subtitle size */
+    }
+    
+    .feature-item {
+      width: 100%; /* Full width for feature items */
+      max-width: none; /* Remove max width limit */
+    }
+    
+    .cta-button {
+      font-size: 1rem; /* Adjust button font size */
+      padding: 10px 20px; /* Adjust button padding */
+    }
+    
+    .main-image {
+      max-width: 100%; /* Ensure image is responsive */
+    }
+  }
+  
+  /* For screens smaller than 480px */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem; /* Further adjust title size */
+    }
+    
+    .subtitle {
+      font-size: 1rem; /* Further adjust subtitle size */
+    }
+    
+    .feature-item {
+      width: 100%; /* Full width for feature items */
+      max-width: none; /* Remove max width limit */
+      padding: 15px; /* Adjust padding */
+    }
+    
+    .cta-button {
+      font-size: 0.9rem; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust button padding */
+    }
+    
+    .main-image {
+      width: 100%; /* Full width for images */
+      max-width: none; /* Remove max width limit */
+    }
+  }
+  
+  /* For screens smaller than 320px */
+  @media (max-width: 320px) {
+    .title {
+      font-size: 1.2rem; /* Further adjust title size */
+    }
+    
+    .subtitle {
+      font-size: 0.9rem; /* Further adjust subtitle size */
+    }
+    
+    .feature-item {
+      width: 100%; /* Full width for feature items */
+      padding: 10px; /* Adjust padding */
+    }
+    
+    .cta-button {
+      font-size: 0.8rem; /* Adjust button font size */
+      padding: 6px 12px; /* Adjust button padding */
+    }
+  }
+  

@@ -1,0 +1,40 @@
+/* Base styles */
+.main-11 {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center the container if needed */
+}
+
+.btn1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .main-11 {
+      padding: 15px; /* Reduce padding on tablets */
+      max-width: 90%; /* Make container width responsive */
+  }
+
+  .btn1 {
+      margin-top: 20px; /* Adjust margin for tablets */
+  }
+}
+
+/* Small screens (phones, 480px and up) */
+@media (max-width: 480px) {
+  .main-11 {
+      padding: 10px; /* Further reduce padding on phones */
+      max-width: 95%; /* Narrower width for phones */
+  }
+
+  .btn1 {
+      margin-top: 15px; /* Adjust margin for phones */
+  }
+}
